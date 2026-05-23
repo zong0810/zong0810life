@@ -216,12 +216,38 @@
     background: linear-gradient(90deg, var(--terracotta), var(--gold), var(--sage));
   }
 
-  /* SVG Illustration */
-  .hero-svg-container {
+  /* Photo */
+  .hero-photo-container {
     width: 100%; display: flex; justify-content: center;
     margin-bottom: 1.5rem;
   }
-  .hero-svg-container svg { width: 180px; height: 180px; }
+  .hero-photo-ring {
+    position: relative;
+    width: 180px; height: 180px;
+  }
+  .hero-photo-ring::before {
+    content: '';
+    position: absolute; inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--terracotta), var(--gold), var(--sage));
+    z-index: 0;
+  }
+  .hero-photo-ring::after {
+    content: '';
+    position: absolute; inset: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(196,113,74,0.15), rgba(201,169,110,0.1));
+    z-index: -1;
+  }
+  .hero-photo {
+    position: relative; z-index: 1;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 15%;
+    border: 4px solid #fff;
+    display: block;
+  }
 
   .illus-quote {
     font-family: 'Noto Serif TC', serif;
@@ -780,56 +806,14 @@
   <div class="hero-visual">
     <div class="hero-illus-wrap">
       <div class="illus-card">
-        <div class="hero-svg-container">
-          <!-- Person illustration SVG -->
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- Background circle -->
-            <circle cx="100" cy="100" r="90" fill="#FAF6EF"/>
-            <!-- Plants/growth elements -->
-            <ellipse cx="160" cy="155" rx="20" ry="30" fill="#A8C4B0" opacity="0.6"/>
-            <ellipse cx="170" cy="148" rx="12" ry="22" fill="#7A9E87" opacity="0.5" transform="rotate(15 170 148)"/>
-            <ellipse cx="40" cy="160" rx="15" ry="25" fill="#A8C4B0" opacity="0.5"/>
-            <ellipse cx="32" cy="155" rx="10" ry="18" fill="#7A9E87" opacity="0.4" transform="rotate(-20 32 155)"/>
-            <!-- Person body -->
-            <ellipse cx="100" cy="145" rx="32" ry="22" fill="#E8956D"/>
-            <!-- Arms -->
-            <ellipse cx="68" cy="132" rx="10" ry="22" fill="#E8956D" transform="rotate(-25 68 132)"/>
-            <ellipse cx="132" cy="132" rx="10" ry="22" fill="#E8956D" transform="rotate(25 132 132)"/>
-            <!-- Neck -->
-            <rect x="92" y="98" width="16" height="20" rx="8" fill="#F5C3A0"/>
-            <!-- Head -->
-            <ellipse cx="100" cy="88" rx="26" ry="28" fill="#F5C3A0"/>
-            <!-- Hair -->
-            <ellipse cx="100" cy="68" rx="27" ry="16" fill="#4A3728"/>
-            <ellipse cx="80" cy="78" rx="10" ry="14" fill="#4A3728"/>
-            <ellipse cx="120" cy="78" rx="10" ry="14" fill="#4A3728"/>
-            <!-- Eyes -->
-            <ellipse cx="91" cy="88" rx="4" ry="4.5" fill="#fff"/>
-            <ellipse cx="109" cy="88" rx="4" ry="4.5" fill="#fff"/>
-            <circle cx="92" cy="89" r="2.5" fill="#2C2A26"/>
-            <circle cx="110" cy="89" r="2.5" fill="#2C2A26"/>
-            <circle cx="93" cy="88" r="1" fill="#fff"/>
-            <circle cx="111" cy="88" r="1" fill="#fff"/>
-            <!-- Smile -->
-            <path d="M93 97 Q100 103 107 97" stroke="#C4714A" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <!-- Cheeks -->
-            <ellipse cx="83" cy="95" rx="7" ry="4" fill="#E8956D" opacity="0.35"/>
-            <ellipse cx="117" cy="95" rx="7" ry="4" fill="#E8956D" opacity="0.35"/>
-            <!-- Clipboard / notepad in hand -->
-            <rect x="56" y="118" width="26" height="32" rx="4" fill="#fff" stroke="#C4714A" stroke-width="1.5"/>
-            <line x1="61" y1="126" x2="77" y2="126" stroke="#C4714A" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="61" y1="132" x2="77" y2="132" stroke="#E8D4A8" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="61" y1="138" x2="73" y2="138" stroke="#E8D4A8" stroke-width="1.5" stroke-linecap="round"/>
-            <!-- Light bulb in other hand -->
-            <circle cx="137" cy="124" r="11" fill="#E8D4A8"/>
-            <circle cx="137" cy="124" r="8" fill="#C9A96E" opacity="0.6"/>
-            <circle cx="137" cy="124" r="5" fill="#fff" opacity="0.7"/>
-            <rect x="133" y="133" width="8" height="4" rx="1" fill="#C9A96E"/>
-            <!-- Stars/sparkles around -->
-            <text x="148" y="70" font-size="14" fill="#C9A96E">✦</text>
-            <text x="40" y="75" font-size="10" fill="#A8C4B0">✦</text>
-            <text x="155" y="100" font-size="8" fill="#C4714A">✦</text>
-          </svg>
+        <div class="hero-photo-container">
+          <div class="hero-photo-ring">
+            <img
+              class="hero-photo"
+              src="https://zong0810.github.io/zong0810life/IMG_6831.webp"
+              alt="Louis 職涯諮詢師"
+            />
+          </div>
         </div>
         <p class="illus-quote">每個人都有<span>屬於自己的答案</span><br>我的工作，是幫你找到它。</p>
         <p class="illus-name">— Louis，職涯諮詢師</p>
