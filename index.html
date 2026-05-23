@@ -602,55 +602,136 @@
   }
   #contact .section-label { justify-content: center; }
   #contact .section-title { margin: 0 auto; }
-  #contact .section-sub { margin: 0 auto 3rem; text-align: center; }
 
-  .contact-card {
-    max-width: 580px;
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    text-align: left;
+    max-width: 1100px;
     margin: 0 auto;
-    background: #fff;
-    border-radius: 32px;
-    padding: 3rem;
-    box-shadow: 0 20px 60px rgba(44,42,38,0.08);
   }
 
-  .contact-illus { margin-bottom: 2rem; }
-  .contact-illus svg { width: 120px; height: 120px; }
+  .contact-info-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 40px rgba(44,42,38,0.07);
+    position: sticky;
+    top: 100px;
+  }
+
+  .contact-illus { text-align: center; margin-bottom: 1.25rem; }
+  .contact-illus svg { width: 90px; height: 90px; }
+
+  .contact-info-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .contact-steps {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--light-gray);
+  }
+  .contact-steps-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--warm-gray);
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+  }
+  .contact-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.83rem;
+    color: var(--warm-gray);
+    line-height: 1.6;
+  }
+  .cstep-num {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* Form card */
+  .form-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(44,42,38,0.07);
+  }
+  .form-card-header {
+    padding: 1.5rem 2rem 1.25rem;
+    border-bottom: 1px solid var(--light-gray);
+    background: var(--cream);
+  }
+  .form-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.3rem;
+  }
+  .form-card-sub {
+    font-size: 0.78rem;
+    color: var(--warm-gray);
+  }
+  .form-iframe-wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+  .form-iframe-wrap iframe {
+    display: block;
+    width: 100%;
+    border: none;
+  }
 
   .contact-methods {
-    display: flex; flex-direction: column; gap: 1rem;
-    margin-bottom: 2rem;
+    display: flex; flex-direction: column; gap: 0.75rem;
+    margin-bottom: 0;
   }
   .contact-method {
     display: flex; align-items: center; gap: 1rem;
-    padding: 1rem 1.25rem;
+    padding: 0.85rem 1rem;
     background: var(--cream);
-    border-radius: 14px;
+    border-radius: 12px;
     text-decoration: none;
     color: var(--charcoal);
     transition: all 0.2s;
-    text-align: left;
   }
   .contact-method:hover {
     background: var(--gold-light);
     transform: translateX(4px);
   }
   .contact-method-icon {
-    width: 44px; height: 44px; flex-shrink: 0;
+    width: 40px; height: 40px; flex-shrink: 0;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 10px rgba(44,42,38,0.07);
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(44,42,38,0.07);
   }
-  .contact-method-text .label { font-size: 0.75rem; color: var(--warm-gray); letter-spacing: 0.06em; }
-  .contact-method-text .value { font-size: 0.9rem; font-weight: 500; margin-top: 0.1rem; }
+  .contact-method-text .label { font-size: 0.72rem; color: var(--warm-gray); letter-spacing: 0.06em; }
+  .contact-method-text .value { font-size: 0.85rem; font-weight: 500; margin-top: 0.1rem; }
 
-  .contact-note {
-    font-size: 0.8rem;
-    color: var(--warm-gray);
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--light-gray);
-    line-height: 1.7;
+  @media (max-width: 900px) {
+    .contact-layout { grid-template-columns: 1fr; }
+    .contact-info-card { position: static; }
   }
 
   /* ── FOOTER ── */
@@ -1044,49 +1125,89 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <p class="section-label">開始行動</p>
-  <h2 class="section-title">準備好了嗎？<br>讓我們<em>一起找答案</em></h2>
-  <p class="section-sub">
-    一封訊息，開啟你的職涯探索旅程。<br>歡迎透過以下方式聯絡 Louis。
-  </p>
-
-  <div class="contact-card reveal">
-    <div class="contact-illus">
-      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="60" r="55" fill="#FAF6EF"/>
-        <!-- Envelope -->
-        <rect x="18" y="35" width="84" height="56" rx="8" fill="#fff" stroke="#E8956D" stroke-width="2"/>
-        <path d="M18 42 L60 68 L102 42" stroke="#E8956D" stroke-width="2" fill="none"/>
-        <line x1="18" y1="91" x2="42" y2="68" stroke="#E8956D" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-        <line x1="102" y1="91" x2="78" y2="68" stroke="#E8956D" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-        <!-- Stars -->
-        <text x="88" y="28" font-size="12" fill="#C9A96E">✦</text>
-        <text x="15" y="25" font-size="9" fill="#A8C4B0">✦</text>
-      </svg>
-    </div>
-
-    <div class="contact-methods">
-      <a href="mailto:zong0810@gmail.com" class="contact-method">
-        <div class="contact-method-icon">✉️</div>
-        <div class="contact-method-text">
-          <div class="label">EMAIL</div>
-          <div class="value">zong0810@gmail.com</div>
-        </div>
-      </a>
-      <a href="https://instagram.com/zong0810" target="_blank" class="contact-method">
-        <div class="contact-method-icon">📷</div>
-        <div class="contact-method-text">
-          <div class="label">INSTAGRAM</div>
-          <div class="value">@zong0810</div>
-        </div>
-      </a>
-    </div>
-
-    <p class="contact-note">
-      💌 來訊後 Louis 會在 1–2 個工作天內回覆<br>
-      可以簡單說明你目前的狀況或困惑，讓我更了解如何幫助你。
+  <div style="text-align:center" class="reveal">
+    <p class="section-label" style="justify-content:center">開始行動</p>
+    <h2 class="section-title">準備好了嗎？<br>讓我們<em>一起找答案</em></h2>
+    <p class="section-sub" style="margin:0 auto 3rem;text-align:center">
+      填寫以下預約表單，Louis 會在 1–2 個工作天內與你確認時間。
     </p>
   </div>
+
+  <div class="contact-layout">
+
+    <!-- Left: info card -->
+    <div class="contact-info reveal">
+      <div class="contact-info-card">
+        <div class="contact-illus">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="55" fill="#FAF6EF"/>
+            <rect x="18" y="35" width="84" height="56" rx="8" fill="#fff" stroke="#E8956D" stroke-width="2"/>
+            <path d="M18 42 L60 68 L102 42" stroke="#E8956D" stroke-width="2" fill="none"/>
+            <line x1="18" y1="91" x2="42" y2="68" stroke="#E8956D" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <line x1="102" y1="91" x2="78" y2="68" stroke="#E8956D" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <text x="88" y="28" font-size="12" fill="#C9A96E">✦</text>
+            <text x="15" y="25" font-size="9" fill="#A8C4B0">✦</text>
+          </svg>
+        </div>
+        <h3 class="contact-info-title">也可以直接聯絡我</h3>
+        <div class="contact-methods">
+          <a href="mailto:zong0810@gmail.com" class="contact-method">
+            <div class="contact-method-icon">✉️</div>
+            <div class="contact-method-text">
+              <div class="label">EMAIL</div>
+              <div class="value">zong0810@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://instagram.com/zong0810" target="_blank" class="contact-method">
+            <div class="contact-method-icon">📷</div>
+            <div class="contact-method-text">
+              <div class="label">INSTAGRAM</div>
+              <div class="value">@zong0810</div>
+            </div>
+          </a>
+        </div>
+        <div class="contact-steps">
+          <p class="contact-steps-title">預約後會發生什麼？</p>
+          <div class="contact-step-item">
+            <span class="cstep-num">1</span>
+            <span>收到表單後，Louis 於 1–2 天內回覆確認</span>
+          </div>
+          <div class="contact-step-item">
+            <span class="cstep-num">2</span>
+            <span>確認時間與諮詢形式（線上 / 面對面）</span>
+          </div>
+          <div class="contact-step-item">
+            <span class="cstep-num">3</span>
+            <span>準時出現，帶著你的困惑就好 🌿</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Google Form -->
+    <div class="contact-form-wrap reveal">
+      <div class="form-card">
+        <div class="form-card-header">
+          <span class="form-tag">📋 預約諮詢表單</span>
+          <p class="form-card-sub">填寫完畢後直接送出，無需另外發送訊息</p>
+        </div>
+        <div class="form-iframe-wrap">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeyeVFTg5Az4rqMdEA0HQjTW9ed-0QmmgtE1SkOILLarrJJtA/viewform?embedded=true"
+            width="100%"
+            height="4646"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Louis 職涯諮詢預約表單"
+            loading="lazy"
+          >載入中…</iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- FOOTER -->
