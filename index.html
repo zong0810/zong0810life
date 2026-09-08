@@ -596,6 +596,99 @@
   .cred-text p { font-size: 0.78rem; color: var(--warm-gray); }
 
   /* ── CONTACT ── */
+  /* ── TRUST (new) ── */
+  #trust { background: #fff; overflow: hidden; }
+
+  .trust-stats-bar {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0; flex-wrap: wrap;
+    background: var(--charcoal);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 4rem;
+  }
+  .trust-stat { text-align: center; flex: 1; min-width: 120px; padding: 0.5rem 1rem; }
+  .trust-stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--terracotta-light);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .trust-stat-num span { font-size: 1.3rem; }
+  .trust-stat-label { font-size: 0.78rem; color: rgba(250,246,239,0.5); letter-spacing: 0.05em; }
+  .trust-stat-divider { width: 1px; height: 40px; background: rgba(250,246,239,0.12); flex-shrink: 0; }
+
+  .trust-header { margin-bottom: 2.5rem; }
+  .trust-header .section-sub { margin-bottom: 0; }
+
+  .client-carousel-wrap { position: relative; margin-bottom: 3rem; overflow: hidden; }
+  .client-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    will-change: transform;
+  }
+
+  .client-card {
+    flex: 0 0 calc(33.333% - 1rem);
+    background: var(--cream);
+    border-radius: 24px;
+    padding: 1.75rem;
+    border: 1.5px solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+  }
+  .client-card:hover {
+    border-color: var(--terracotta-light);
+    box-shadow: 0 12px 40px rgba(196,113,74,0.12);
+    transform: translateY(-4px);
+  }
+
+  .cc-top { display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap; }
+  .cc-avatar {
+    width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 1rem;
+    font-family: 'Noto Serif TC', serif;
+  }
+  .cc-meta { flex: 1; min-width: 0; }
+  .cc-name { font-weight: 700; font-size: 0.95rem; color: var(--charcoal); }
+  .cc-role { font-size: 0.75rem; color: var(--warm-gray); margin-top: 0.1rem; line-height: 1.4; }
+  .cc-tag { font-size: 0.7rem; font-weight: 600; padding: 0.28rem 0.8rem; border-radius: 100px; letter-spacing: 0.04em; flex-shrink: 0; }
+  .cc-tag-terra { background: rgba(196,113,74,0.12); color: var(--terracotta-dark); }
+  .cc-tag-sage { background: rgba(122,158,135,0.15); color: var(--sage-dark); }
+  .cc-tag-gold { background: rgba(201,169,110,0.18); color: #8A6520; }
+
+  .cc-pain { background: #fff; border-radius: 14px; padding: 1rem 1.1rem; border-left: 3px solid var(--terracotta-light); }
+  .cc-pain-label { display: block; font-size: 0.72rem; font-weight: 600; color: var(--terracotta); letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+  .cc-pain p { font-size: 0.83rem; color: var(--warm-gray); line-height: 1.7; margin: 0; }
+
+  .cc-tags-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .cc-chip { font-size: 0.72rem; padding: 0.22rem 0.65rem; background: #fff; border: 1px solid var(--light-gray); border-radius: 100px; color: var(--warm-gray); }
+
+  .cc-strength { font-size: 0.8rem; color: var(--sage-dark); display: flex; flex-direction: column; gap: 0.2rem; }
+  .cc-s-label { font-weight: 600; font-size: 0.72rem; letter-spacing: 0.05em; }
+
+  .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+  .carousel-btn {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1.5px solid var(--light-gray); background: #fff;
+    color: var(--charcoal); font-size: 1rem; cursor: pointer;
+    transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+  }
+  .carousel-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+  .carousel-btn:disabled { opacity: 0.3; cursor: default; }
+  .carousel-dots { display: flex; gap: 6px; }
+  .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--light-gray); transition: all 0.25s; cursor: pointer; }
+  .carousel-dot.active { background: var(--terracotta); width: 22px; border-radius: 4px; }
+
+  .trust-creds-bar { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; padding-top: 2.5rem; border-top: 1px solid var(--light-gray); }
+  .trust-creds-bar .cred-item { flex: 1; min-width: 160px; max-width: 220px; }
+
   #contact {
     background: linear-gradient(160deg, var(--cream) 0%, rgba(122,158,135,0.08) 100%);
     text-align: center;
@@ -735,6 +828,99 @@
   }
 
   /* ── FOOTER ── */
+
+  /* ── FEEDBACK ── */
+  .feedback-section { margin-top: 4rem; }
+  .feedback-header { margin-bottom: 2.5rem; }
+
+  .score-summary {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2.5rem;
+    background: var(--charcoal);
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    align-items: center;
+  }
+  .score-main { text-align: center; }
+  .score-big {
+    font-family: 'DM Serif Display', serif;
+    font-size: 5rem;
+    color: var(--terracotta-light);
+    line-height: 1;
+  }
+  .score-stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 0.1em; margin: 0.4rem 0; }
+  .score-label { font-size: 0.75rem; color: rgba(250,246,239,0.45); letter-spacing: 0.04em; }
+
+  .score-bars { display: flex; flex-direction: column; gap: 0.7rem; }
+  .score-bar-item { display: flex; align-items: center; gap: 0.75rem; }
+  .sbi-label { font-size: 0.78rem; color: rgba(250,246,239,0.6); width: 130px; flex-shrink: 0; }
+  .sbi-track { flex: 1; height: 6px; background: rgba(250,246,239,0.1); border-radius: 3px; overflow: hidden; }
+  .sbi-fill { height: 100%; background: linear-gradient(90deg, var(--terracotta), var(--gold)); border-radius: 3px; transition: width 1.2s ease; }
+  .sbi-val { font-size: 0.78rem; color: var(--gold); font-weight: 600; width: 28px; text-align: right; flex-shrink: 0; }
+
+  .fb-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .fb-card-featured { grid-column: 1 / -1; }
+
+  .fb-card {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 1.75rem;
+    border: 1.5px solid transparent;
+    transition: all 0.3s;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .fb-card:hover { border-color: var(--terracotta-light); box-shadow: 0 8px 32px rgba(196,113,74,0.10); transform: translateY(-3px); }
+  .fb-card-featured {
+    background: linear-gradient(135deg, #fff 60%, rgba(196,113,74,0.05));
+    border-color: var(--gold-light);
+    box-shadow: 0 4px 24px rgba(196,113,74,0.08);
+  }
+
+  .fb-score-row { display: flex; align-items: center; gap: 0.75rem; }
+  .fb-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 0.08em; }
+  .fb-score-badge {
+    font-size: 0.72rem; font-weight: 700;
+    background: var(--terracotta); color: #fff;
+    padding: 0.18rem 0.6rem; border-radius: 100px;
+    letter-spacing: 0.04em;
+  }
+
+  .fb-quote {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 0.88rem;
+    line-height: 1.85;
+    color: var(--charcoal);
+    position: relative;
+    padding-left: 1rem;
+    border-left: 2px solid var(--terracotta-light);
+    margin: 0;
+    flex: 1;
+  }
+
+  .fb-meta { display: flex; align-items: center; gap: 0.75rem; margin-top: auto; }
+  .fb-avatar {
+    width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 0.72rem; font-weight: 700;
+    font-family: 'Noto Serif TC', serif;
+  }
+  .fb-code { font-size: 0.8rem; font-weight: 600; color: var(--charcoal); }
+  .fb-tag-row { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.25rem; }
+  .fb-tag { font-size: 0.68rem; color: var(--sage-dark); background: rgba(122,158,135,0.12); padding: 0.15rem 0.5rem; border-radius: 100px; }
+
+  @media (max-width: 700px) {
+    .fb-cards { grid-template-columns: 1fr; }
+    .fb-card-featured { grid-column: auto; }
+    .score-summary { grid-template-columns: 1fr; }
+    .score-main { padding-bottom: 1.5rem; border-bottom: 1px solid rgba(250,246,239,0.1); }
+    .sbi-label { width: 100px; font-size: 0.72rem; }
+  }
   footer {
     background: var(--charcoal);
     text-align: center;
@@ -806,6 +992,8 @@
     .trust-layout { grid-template-columns: 1fr; gap: 2rem; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
+    .client-card { flex: 0 0 calc(50% - 0.75rem); }
+    .trust-stat-divider { display: none; }
   }
 
   @media (max-width: 600px) {
@@ -815,6 +1003,9 @@
     .process-step:last-child { border-bottom: none; }
     .step-arrow { display: none; }
     .outcome-icon { display: none; }
+    .client-card { flex: 0 0 100%; }
+    .trust-stats-bar { padding: 1.5rem 1rem; }
+    .trust-creds-bar .cred-item { min-width: 140px; }
     .contact-card { padding: 2rem 1.5rem; }
     .floating-badge { display: none; }
     .hero-stats { gap: 1.5rem; }
@@ -1023,7 +1214,7 @@
       <div class="step-num">01</div>
       <div class="step-icon">📩</div>
       <h3>預約 & 填寫表單</h3>
-      <p>透過google表單填表聯絡，填寫簡短的事前問卷，讓 Louis 事先了解你的狀況。</p>
+      <p>透過 Email 或 IG 聯絡，填寫簡短的事前問卷，讓 Louis 事先了解你的狀況。</p>
       <div class="step-arrow">→</div>
     </div>
     <div class="process-step">
@@ -1059,67 +1250,330 @@
 
 <!-- TRUST -->
 <section id="trust">
-  <div class="reveal">
-    <p class="section-label">他們說</p>
-    <h2 class="section-title">諮詢後的<em>真實改變</em></h2>
-    <p class="section-sub">每一段對話，都是一次真實的成長。</p>
+  <!-- Stats bar -->
+  <div class="trust-stats-bar reveal">
+    <div class="trust-stat">
+      <div class="trust-stat-num">9<span>+</span></div>
+      <div class="trust-stat-label">真實諮詢案例</div>
+    </div>
+    <div class="trust-stat-divider"></div>
+    <div class="trust-stat">
+      <div class="trust-stat-num">25~37</div>
+      <div class="trust-stat-label">歲的來訪者</div>
+    </div>
+    <div class="trust-stat-divider"></div>
+    <div class="trust-stat">
+      <div class="trust-stat-num">100<span>%</span></div>
+      <div class="trust-stat-label">同意繼續合作</div>
+    </div>
+    <div class="trust-stat-divider"></div>
+    <div class="trust-stat">
+      <div class="trust-stat-num">多元</div>
+      <div class="trust-stat-label">產業背景</div>
+    </div>
   </div>
 
-  <div class="trust-layout">
-    <div class="reveal">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">
-          「透過和 Louis 的諮詢，我了解到自己其實有能力、也是可以當責的。更清楚了 HR 工作的意涵與文化。經過資訊收集和回饋，我的面談技巧明顯有進步，對未來的方向也更有信心了。」
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">🌿</div>
-          <div class="author-info">
-            <div class="name">諮詢學員</div>
-            <div class="role">應屆畢業生，探索 HR 職涯方向</div>
+  <div class="trust-header reveal">
+    <p class="section-label">真實案例</p>
+    <h2 class="section-title">他們帶著困惑來，<br>帶著<em>方向</em>離開</h2>
+    <p class="section-sub">以下為實際諮詢來訪者的背景與課題（已匿名化處理）</p>
+  </div>
+
+  <!-- Client cards carousel -->
+  <div class="client-carousel-wrap reveal">
+    <div class="client-track" id="clientTrack">
+
+      <!-- Card 1: 玉米 -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#E8956D,#C4714A)">A1</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A1</div>
+            <div class="cc-role">28 歲｜小學輔導老師・7 年資歷</div>
           </div>
+          <div class="cc-tag cc-tag-terra">轉職探索</div>
         </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>找工作找到心累，希望在現實與夢想之間找到平衡點；想在某個領域深耕，並能在面試中順暢表達自己的優勢。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">助人者</span>
+          <span class="cc-chip">創造者</span>
+          <span class="cc-chip">人資 / 諮商方向</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>協助他人・感同身受・熱愛學習・深化關係</span>
+        </div>
+      </div>
+
+      <!-- Card 2: 湘紜 -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#7A9E87,#5B7E68)">A2</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A2</div>
+            <div class="cc-role">25 歲｜心理系研究生・碩一</div>
+          </div>
+          <div class="cc-tag cc-tag-sage">方向釐清</div>
+        </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>原本走自由工作者路線，近期力不從心，開始嚮往穩定辦公室工作，卻不確定人資方向是否適合，對未來感到焦慮。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">思考者</span>
+          <span class="cc-chip">助人者</span>
+          <span class="cc-chip">人資方向</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>熱愛學習・專注目標・概念思考・感同身受</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Grace -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#C9A96E,#A3853A)">A3</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A3</div>
+            <div class="cc-role">26 歲｜HR・工作 1.5 年</div>
+          </div>
+          <div class="cc-tag cc-tag-gold">是否轉職</div>
+        </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>不確定是否要轉職，想進修程式語言或其他課程，希望更清楚未來職涯方向、設立短期可執行目標。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">思考者</span>
+          <span class="cc-chip">影響者</span>
+          <span class="cc-chip">職涯規劃</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>靈活應變・表達技巧・人際理解・解決難題</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Roy -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#9B6B9B,#7A4A7A)">A4</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A4</div>
+            <div class="cc-role">27 歲｜待業中・職場資歷 3 年</div>
+          </div>
+          <div class="cc-tag cc-tag-terra">重新出發</div>
+        </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>剛結束上一份工作，想更了解未來職業方向，釐清自己適合什麼類型的工作環境與職位。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">規範秩序</span>
+          <span class="cc-chip">社交型</span>
+          <span class="cc-chip">職涯方向探索</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>規範秩序・追求公平・自我覺察・邏輯思維</span>
+        </div>
+      </div>
+
+      <!-- Card 5: 宥盛 -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#4A6B8A,#2E4F6E)">A5</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A5</div>
+            <div class="cc-role">35 歲｜金融業・13 年資歷</div>
+          </div>
+          <div class="cc-tag cc-tag-sage">深層探索</div>
+        </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>在金融業深耕多年卻感到徬徨，想找尋自己的心性是什麼，探索工作背後更深層的意義與價值。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">助人者</span>
+          <span class="cc-chip">實踐者</span>
+          <span class="cc-chip">思考者</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>責任承諾・熱愛學習・樂觀正向・感同身受</span>
+        </div>
+      </div>
+
+      <!-- Card 6: 冠葎 -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#E8956D,#9B4A2E)">A6</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A6</div>
+            <div class="cc-role">27 歲｜電視企劃・5 年資歷</div>
+          </div>
+          <div class="cc-tag cc-tag-terra">轉職評估</div>
+        </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>電視產業高工時低薪，在繼續或轉換跑道之間猶豫不決，想客觀評估自己的優勢與未來選項。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">創造者</span>
+          <span class="cc-chip">實踐者</span>
+          <span class="cc-chip">媒體 / 創意方向</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>成就導向・責任承諾・靈活應變・創新思維</span>
+        </div>
+      </div>
+
+      <!-- Card 7: Brian -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#6B8A6B,#3E5E3E)">A7</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A7</div>
+            <div class="cc-role">35 歲｜企管顧問・12 年資歷</div>
+          </div>
+          <div class="cc-tag cc-tag-sage">轉職動力</div>
+        </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>想轉職，但現職待遇與彈性佳，外部吸引力不足、內部推力也不夠，不知道下一步該如何評估與行動。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">影響者</span>
+          <span class="cc-chip">思考者</span>
+          <span class="cc-chip">助人者</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>發揮效率・樂觀正向・成就導向・領導統率</span>
+        </div>
+      </div>
+
+      <!-- Card 8: Amy -->
+      <div class="client-card">
+        <div class="cc-top">
+          <div class="cc-avatar" style="background:linear-gradient(135deg,#C9A96E,#E8956D)">A8</div>
+          <div class="cc-meta">
+            <div class="cc-name">來訪者 A8</div>
+            <div class="cc-role">37 歲｜業務・13 年資歷</div>
+          </div>
+          <div class="cc-tag cc-tag-gold">重燃熱情</div>
+        </div>
+        <div class="cc-pain">
+          <span class="cc-pain-label">😔 來訪困惑</span>
+          <p>對業務工作性質開始產生懷疑，想更了解自己適合什麼樣的職務，找到能創造更好價值與熱情的方向。</p>
+        </div>
+        <div class="cc-tags-row">
+          <span class="cc-chip">助人者</span>
+          <span class="cc-chip">思考者</span>
+          <span class="cc-chip">創意 / 美感方向</span>
+        </div>
+        <div class="cc-strength">
+          <span class="cc-s-label">✨ 核心優勢</span>
+          <span>成就導向・專注目標・規範秩序・自我管理</span>
+        </div>
+      </div>
+
+    </div><!-- end track -->
+
+    <!-- Navigation -->
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="prevBtn" onclick="slideCarousel(-1)">←</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="nextBtn" onclick="slideCarousel(1)">→</button>
+    </div>
+  </div>
+
+  <!-- ── FEEDBACK SECTION ── -->
+  <div class="feedback-section reveal">
+    <div class="feedback-header">
+      <p class="section-label">諮詢後回饋</p>
+      <h2 class="section-title">他們這樣說 <em>✦</em></h2>
+      <p class="section-sub">以下為真實來訪者於諮詢結束後填寫之回饋（已匿名化）</p>
+    </div>
+
+    <div class="score-summary">
+      <div class="score-main">
+        <div class="score-big">9.4</div>
+        <div class="score-stars">★★★★★</div>
+        <div class="score-label">平均推薦分數（滿分 10）</div>
+      </div>
+      <div class="score-bars">
+        <div class="score-bar-item"><span class="sbi-label">態度溫暖真誠</span><div class="sbi-track"><div class="sbi-fill" style="width:100%"></div></div><span class="sbi-val">5.0</span></div>
+        <div class="score-bar-item"><span class="sbi-label">協助釐清問題</span><div class="sbi-track"><div class="sbi-fill" style="width:96%"></div></div><span class="sbi-val">4.8</span></div>
+        <div class="score-bar-item"><span class="sbi-label">發現特質與強項</span><div class="sbi-track"><div class="sbi-fill" style="width:96%"></div></div><span class="sbi-val">4.8</span></div>
+        <div class="score-bar-item"><span class="sbi-label">知道接下來如何行動</span><div class="sbi-track"><div class="sbi-fill" style="width:96%"></div></div><span class="sbi-val">4.8</span></div>
+        <div class="score-bar-item"><span class="sbi-label">降低焦慮或不安</span><div class="sbi-track"><div class="sbi-fill" style="width:88%"></div></div><span class="sbi-val">4.4</span></div>
+        <div class="score-bar-item"><span class="sbi-label">更有自信與價值感</span><div class="sbi-track"><div class="sbi-fill" style="width:84%"></div></div><span class="sbi-val">4.2</span></div>
       </div>
     </div>
 
-    <div class="trust-creds reveal">
-      <p style="font-size:0.8rem;font-weight:600;letter-spacing:0.1em;color:var(--warm-gray);text-transform:uppercase;margin-bottom:0.5rem">Louis 的資歷背景</p>
-      <div class="cred-item">
-        <div class="cred-icon">🏅</div>
-        <div class="cred-text">
-          <h4>職業安全管理員證照</h4>
-          <p>具備專業證照認證背景</p>
+    <div class="fb-cards">
+
+      <div class="fb-card fb-card-featured">
+        <div class="fb-score-row"><span class="fb-stars">★★★★★</span><span class="fb-score-badge">10 / 10</span></div>
+        <blockquote class="fb-quote">「我覺得最有幫助的地方是從不同的角度看自己，意識到自己現在的課題是價值觀的梳理。最印象深刻的是意識到自己處在追求工作效率和嚮往慢活的衝突之中，因此才在職涯選擇上覺得糾結。每一個價值觀可以在不同的時間依序完成，不一定要一次滿足，讓我在釐清現階段想要的生活上幫助很多！」</blockquote>
+        <div class="fb-meta">
+          <div class="fb-avatar" style="background:linear-gradient(135deg,#E8956D,#C4714A)">B1</div>
+          <div class="fb-info"><div class="fb-code">來訪者 B1</div><div class="fb-tag-row"><span class="fb-tag">✅ 價值觀梳理</span><span class="fb-tag">✅ 職涯方向</span></div></div>
         </div>
       </div>
-      <div class="cred-item">
-        <div class="cred-icon">🏢</div>
-        <div class="cred-text">
-          <h4>現任企業 HRD</h4>
-          <p>負責教育訓練與員工職涯發展</p>
+
+      <div class="fb-card">
+        <div class="fb-score-row"><span class="fb-stars">★★★★★</span><span class="fb-score-badge">10 / 10</span></div>
+        <blockquote class="fb-quote">「謝謝 Louis 的用心！諮詢過程中有感受到被理解，也協助我歸納自己的想法並找出盲點，整個過程獲得了非常多的動力。對自己著重的價值觀以及長處有更多理解，也更清楚未來職涯方向及短中長期規劃。」</blockquote>
+        <div class="fb-meta">
+          <div class="fb-avatar" style="background:linear-gradient(135deg,#7A9E87,#5B7E68)">B2</div>
+          <div class="fb-info"><div class="fb-code">來訪者 B2</div><div class="fb-tag-row"><span class="fb-tag">✅ 找出盲點</span><span class="fb-tag">✅ 短中長期規劃</span></div></div>
         </div>
       </div>
-      <div class="cred-item">
-        <div class="cred-icon">🤝</div>
-        <div class="cred-text">
-          <h4>政府產學合作專案</h4>
-          <p>數位發展部 T 大使、AI 人才培育計畫</p>
+
+      <div class="fb-card">
+        <div class="fb-score-row"><span class="fb-stars">★★★★★</span><span class="fb-score-badge">10 / 10</span></div>
+        <blockquote class="fb-quote">「成為了我明知道該怎麼做卻不去做的推手。在第一堂課的談話，讓我持續地往前走下去，後續的課程讓我願意更相信你的專業。謝謝你的協助！」</blockquote>
+        <div class="fb-meta">
+          <div class="fb-avatar" style="background:linear-gradient(135deg,#C9A96E,#A3853A)">B3</div>
+          <div class="fb-info"><div class="fb-code">來訪者 B3</div><div class="fb-tag-row"><span class="fb-tag">✅ 行動推手</span><span class="fb-tag">✅ 持續前進</span></div></div>
         </div>
       </div>
-      <div class="cred-item">
-        <div class="cred-icon">📐</div>
-        <div class="cred-text">
-          <h4>TTQS 企業訓練品質</h4>
-          <p>組織發展與學習制度設計實務經驗</p>
+
+      <div class="fb-card">
+        <div class="fb-score-row"><span class="fb-stars">★★★★☆</span><span class="fb-score-badge">9 / 10</span></div>
+        <blockquote class="fb-quote">「找到未來職涯可以發展的方向。加油！祝一切順利～」</blockquote>
+        <div class="fb-meta">
+          <div class="fb-avatar" style="background:linear-gradient(135deg,#9B6B9B,#7A4A7A)">B4</div>
+          <div class="fb-info"><div class="fb-code">來訪者 B4</div><div class="fb-tag-row"><span class="fb-tag">✅ 職涯方向</span></div></div>
         </div>
       </div>
-      <div class="cred-item">
-        <div class="cred-icon">🔄</div>
-        <div class="cred-text">
-          <h4>親身轉職經歷</h4>
-          <p>30 歲轉型，深刻理解職涯迷茫的感受</p>
+
+      <div class="fb-card">
+        <div class="fb-score-row"><span class="fb-stars">★★★★☆</span><span class="fb-score-badge">8 / 10</span></div>
+        <blockquote class="fb-quote">「了解到自己其實有能力且負責任的，我是可以做到當責的；更了解 HR 的工作意涵以及文化；經過資訊收集和回饋，面談技巧有進步。謝謝諮詢師願意配合，有感受到你的真誠和認真。」</blockquote>
+        <div class="fb-meta">
+          <div class="fb-avatar" style="background:linear-gradient(135deg,#4A6B8A,#2E4F6E)">B5</div>
+          <div class="fb-info"><div class="fb-code">來訪者 B5</div><div class="fb-tag-row"><span class="fb-tag">✅ 自我認識</span><span class="fb-tag">✅ 面談技巧提升</span></div></div>
         </div>
       </div>
+
     </div>
+  </div>
+
+  <!-- Creds bar below -->
+  <div class="trust-creds-bar reveal">
+    <div class="cred-item"><div class="cred-icon">🏅</div><div class="cred-text"><h4>職業安全管理員證照</h4><p>具備專業認證背景</p></div></div>
+    <div class="cred-item"><div class="cred-icon">🏢</div><div class="cred-text"><h4>現任企業 HRD</h4><p>教育訓練與員工發展</p></div></div>
+    <div class="cred-item"><div class="cred-icon">🤝</div><div class="cred-text"><h4>政府產學合作</h4><p>T 大使・AI 人才培育</p></div></div>
+    <div class="cred-item"><div class="cred-icon">📐</div><div class="cred-text"><h4>TTQS 認證經驗</h4><p>組織發展與學習設計</p></div></div>
+    <div class="cred-item"><div class="cred-icon">🔄</div><div class="cred-text"><h4>親身轉職歷程</h4><p>30 歲轉型，感同身受</p></div></div>
   </div>
 </section>
 
@@ -1242,6 +1696,79 @@
   document.querySelectorAll('.service-card').forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.1}s`;
   });
+
+  // ── Carousel ──
+  (function() {
+    const track = document.getElementById('clientTrack');
+    const dotsWrap = document.getElementById('carouselDots');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    if (!track) return;
+
+    const cards = track.querySelectorAll('.client-card');
+    const total = cards.length;
+    let current = 0;
+
+    function getVisible() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 900) return 2;
+      return 3;
+    }
+
+    function maxIndex() { return Math.max(0, total - getVisible()); }
+
+    // Build dots
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      const pages = maxIndex() + 1;
+      for (let i = 0; i < pages; i++) {
+        const d = document.createElement('button');
+        d.className = 'carousel-dot' + (i === current ? ' active' : '');
+        d.setAttribute('aria-label', 'Page ' + (i+1));
+        d.onclick = () => goTo(i);
+        dotsWrap.appendChild(d);
+      }
+    }
+
+    function updateTrack() {
+      const vis = getVisible();
+      const gap = 24; // 1.5rem
+      const cardW = (track.parentElement.offsetWidth - gap * (vis - 1)) / vis;
+      const offset = current * (cardW + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+      // Dots
+      dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current >= maxIndex();
+    }
+
+    function goTo(idx) {
+      current = Math.max(0, Math.min(idx, maxIndex()));
+      updateTrack();
+    }
+
+    window.slideCarousel = function(dir) { goTo(current + dir); };
+
+    // Touch / drag
+    let startX = 0, isDragging = false;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; isDragging = true; }, {passive:true});
+    track.addEventListener('touchend', e => {
+      if (!isDragging) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
+      isDragging = false;
+    }, {passive:true});
+
+    buildDots();
+    updateTrack();
+    window.addEventListener('resize', () => {
+      current = Math.min(current, maxIndex());
+      buildDots();
+      updateTrack();
+    });
+  })();
 </script>
 </body>
 </html>
